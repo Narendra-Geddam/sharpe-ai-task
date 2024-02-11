@@ -1,13 +1,13 @@
 // Transaction.js
 import React from 'react';
 
-const Transaction = () => {
+function Transaction() {
   return (
     <div>
-      <h1>Transaction Page</h1>
-      {/* Add your transaction form here */}
+      <h2>Transaction Page</h2>
+      {/* Add your transaction page content here */}
     </div>
   );
-};
+}
 
 export default Transaction;

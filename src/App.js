@@ -1,37 +1,37 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import Home from './Home';
-import Transaction from './Transaction';
-import Data from './Data';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Transaction from './components/Transaction';
+import Data from './components/Data';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 const App = () => {
   return (
     <Router>
       <div>
-        {/* Navbar */}
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/transaction">Transaction</Link>
-            </li>
-            <li>
-              <Link to="/data">Data</Link>
-            </li>
-          </ul>
-        </nav>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              My App
+            </Typography>
+            <Button color="inherit" href="/">Home</Button>
+            <Button color="inherit" href="/transaction">Transaction</Button>
+            <Button color="inherit" href="/data">Data</Button>
+          </Toolbar>
+        </AppBar>
 
-        {/* Routes */}
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/transaction" component={Transaction} />
-          <Route path="/data" component={Data} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/transaction" element={<Transaction />} />
+          <Route path="/data" element={<Data />} />
+        </Routes>
       </div>
     </Router>
   );
 };
 
 export default App;
+
