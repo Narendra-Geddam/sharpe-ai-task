@@ -12,7 +12,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <AppBar position="static">
+        <AppBar color="warning" position="static">
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               My App
