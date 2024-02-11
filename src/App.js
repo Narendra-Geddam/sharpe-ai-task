@@ -7,31 +7,41 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from '@mui/material/styles'; // Import ThemeProvider and createTheme
+
+const theme = createTheme({ // Create a theme object with the primary color set to #F52549
+  palette: {
+    primary: {
+      main: '#1995AD',
+    },
+  },
+});
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <AppBar color="warning" position="static">
-          <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              My App
-            </Typography>
-            <Button color="inherit" href="/">Home</Button>
-            <Button color="inherit" href="/transaction">Transaction</Button>
-            <Button color="inherit" href="/data">Data</Button>
-          </Toolbar>
-        </AppBar>
+      <ThemeProvider theme={theme}> {/* Wrap the entire app with ThemeProvider and pass the created theme */}
+        <div>
+          <AppBar color="primary" position="static"> {/* Change color prop to 'primary' */}
+            <Toolbar>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                My App
+              </Typography>
+              <Button color="inherit" href="/">Home</Button>
+              <Button color="inherit" href="/transaction">Transaction</Button>
+              <Button color="inherit" href="/data">Data</Button>
+            </Toolbar>
+          </AppBar>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/transaction" element={<Transaction />} />
-          <Route path="/data" element={<Data />} />
-        </Routes>
-      </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/transaction" element={<Transaction />} />
+            <Route path="/data" element={<Data />} />
+          </Routes>
+        </div>
+      </ThemeProvider> {/* Close the ThemeProvider */}
     </Router>
   );
 };
 
 export default App;
-
