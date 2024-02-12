@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import Transaction from './components/Transaction';
 import Data from './components/Data';
@@ -8,11 +8,12 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles'; // Import ThemeProvider and createTheme
+import Logo from './assets/logo.png'; // Import the logo image
 
 const theme = createTheme({ // Create a theme object with the primary color set to #F52549
   palette: {
     primary: {
-      main: '#4d81ff',
+      main: '#e5edff',
     },
   },
 });
@@ -24,12 +25,19 @@ const App = () => {
         <div>
           <AppBar color="primary" position="static"> {/* Change color prop to 'primary' */}
             <Toolbar>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                My App
-              </Typography>
-              <Button color="inherit" href="/">Home</Button>
-              <Button color="inherit" href="/transaction">Transaction</Button>
-              <Button color="inherit" href="/data">Data</Button>
+              <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}> {/* Make logo and brand name clickable */}
+                <img src={Logo} alt="Logo" style={{ marginRight: 8, height: 40 }} /> {/* Add the logo before the brand name */}
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: '#36454f' }}> {/* Change color of font to gray */}
+                  Ethereum
+                </Typography>
+              </Link>
+             
+              <div style={{ marginLeft: 'auto' }}> {/* Add this div to align buttons to the left */}
+                <Button color="inherit" component={Link} to="/">Home</Button>
+                <Button color="inherit" component={Link} to="/transaction">Transaction</Button>
+                <Button color="inherit" component={Link} to="/data">Data</Button>
+              </div>
+              
             </Toolbar>
           </AppBar>
 
