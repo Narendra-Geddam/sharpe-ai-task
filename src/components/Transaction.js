@@ -5,6 +5,8 @@ import { TextField, Button, Typography, Container, Grid, Snackbar } from '@mui/m
 import Alert from '@mui/material/Alert';
 import db from '../firebase';
 
+import '../index.css'; // Import your global CSS file
+
 const Transaction = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [submitting, setSubmitting] = useState(false);
@@ -57,7 +59,7 @@ const Transaction = () => {
 
   return (
     <Container maxWidth="sm" style={{ marginTop: '50px', textAlign: 'center' }}>
-      <Typography variant="h2">Transaction Page</Typography>
+      <div className="lilita-one-regular" style={{ fontSize: '3rem', marginBottom: '0.35em' }}>Transaction Details</div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Grid container spacing={2} justifyContent="center">
           <Grid item xs={12}>

@@ -33,9 +33,9 @@ const App = () => {
               </Link>
              
               <div style={{ marginLeft: 'auto' }}> {/* Add this div to align buttons to the left */}
-                <Button color="inherit" component={Link} to="/">Home</Button>
-                <Button color="inherit" component={Link} to="/transaction">Transaction</Button>
-                <Button color="inherit" component={Link} to="/data">Data</Button>
+                <Button style={{color:'#36454f'}} color="inherit" component={Link} to="/">Home</Button>
+                <Button style={{color:'#36454f'}} color="inherit" component={Link} to="/transaction">Transaction</Button>
+                <Button style={{color:'#36454f'}} color="inherit" component={Link} to="/data">Data</Button>
               </div>
               
             </Toolbar>

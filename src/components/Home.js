@@ -65,7 +65,7 @@ const Home = () => {
         <div className="roboto-regular" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>
           We provide cutting-edge solutions for cryptocurrency enthusiasts, investors, and traders. Explore the latest trends, news, and tools to stay ahead in the crypto world.
         </div>
-        <Button variant="contained" color="primary" style={{ marginTop: 20 }}>
+        <Button style={{color:'#36454f', marginTop: 20}} variant="contained" color="primary" >
           Explore More
         </Button>
       </div>
