@@ -1,71 +1,59 @@
-# Getting Started with Create React App
+# Frontend React.js Developer Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objective
+The objective of this project is to design and develop a simplified web application using React.js, focusing on seamless navigation using React Router, form input validation, error handling, and writing clean, readable code.
 
-## Available Scripts
+## Technologies
+- React JS
+- Google Firestore
+- Template Library: Material-UI
 
-In the project directory, you can run:
+## Assignment Details
 
-### `npm start`
+### React Router Navigation
+- Designed a web application with three pages: Home, Transaction, and Data.
+- Implemented seamless navigation between these pages using React Router.
+- Created a simple and aesthetic navbar for easy navigation.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Transaction Page (Form Input Validation)
+- Implemented form input validation for the Transaction page.
+- Validated the wallet address to follow the standard Ethereum address format using ether.js.
+- Ensured the amount entered is a number within a specified range (0 - 10,000).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Data Page
+- Fetched data from the Google Firestore database stored during the Transaction Page.
 
-### `npm test`
+### Error Handling
+- Provided clear and user-friendly error messages for form validations.
+- Displayed appropriate messages for errors such as empty fields or incorrect values.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Code Proficiency and Readability
+- Maintained clean, concise, and easily readable code.
+- Added comments where necessary to explain complex functionality.
+- Avoided corner cases that could break the application.
 
-### `npm run build`
+## Instructions
+### Installation
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `npm install` to install dependencies.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Running the Application
+1. Run `npm start` to start the development server.
+2. Open your browser and go to `http://localhost:3000` to view the application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Challenges Faced
+- The primary challenge was integrating Firebase Firestore for database storage.
+- Ensuring proper validation and error handling for form inputs was also challenging.
+- Overcame challenges by referring to documentation, online resources, and seeking assistance from the community.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Evaluation Criteria
+- Successful implementation of React Router for seamless navigation.
+- Proper implementation of Firestore database.
+- Effective form validation and error handling.
+- Code quality, readability, and structure.
+- Overall user experience and design of the web application.
 
-### `npm run eject`
+## Conclusion
+This project demonstrates proficiency in React.js development, including React Router navigation, form input validation, error handling, and code quality. It showcases the ability to meet the assignment's requirements and deliver a user-friendly web application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# sharpe-ai-task
