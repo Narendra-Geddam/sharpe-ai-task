@@ -12,7 +12,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'; // Import The
 const theme = createTheme({ // Create a theme object with the primary color set to #F52549
   palette: {
     primary: {
-      main: '#1995AD',
+      main: '#4d81ff',
     },
   },
 });

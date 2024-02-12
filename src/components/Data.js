@@ -8,33 +8,37 @@ import { ref, onValue } from 'firebase/database';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${theme.palette.mode === 'light' ? 'head' : 'body'}`]: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
-    fontWeight: 'bold', // Make table header bold
-    textAlign: 'left', // Align text in table header to left
+    backgroundColor: theme.palette.mode === 'light' ? '#183a88' : theme.palette.common.black,
+    color: theme.palette.mode === 'light' ? '#c3c7e6' : theme.palette.common.white,
+    fontWeight: 'bold',
+    textAlign: 'left',
   },
   [`&.${theme.palette.mode === 'light' ? 'body' : 'head'}`]: {
     fontSize: 14,
-    textAlign: 'left', // Align text in table cells to left
+    textAlign: 'left',
+    color: theme.palette.mode === 'light' ? '#000000' : '#c3c7e6',
   },
-  // Make specific cells bold
   '&.bold-cell': {
     fontWeight: 'bold',
+    backgroundColor: theme.palette.mode === 'light' ? '#4d81ff' : '#183a88',
+    color: theme.palette.mode === 'light' ? '#ffffff' : '#ffffff',
   },
 }));
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:nth-of-type(odd)': {
-    backgroundColor: '#c5e5ed', // Your first color
+    backgroundColor: theme.palette.mode === 'light' ? '#b4caff' : '#3c5dac',
+    color: '#c3c7e6',
   },
   '&:nth-of-type(even)': {
-    backgroundColor: '#ecf6f9', // Your second color
+    backgroundColor: theme.palette.mode === 'light' ? '#ffffff' : '#b4caff',
+    color: '#000000',
   },
-  // hide last border
-  '&:last-child td, &:last-child th': {
-    border: 0,
+  '&:hover': {
+    backgroundColor: theme.palette.mode === 'light' ? '#f0f0f0' : '#37474f',
   },
 }));
+
 
 const CustomizedTable = () => {
   const [transactions, setTransactions] = useState([]);

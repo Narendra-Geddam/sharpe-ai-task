@@ -67,6 +67,7 @@ const Transaction = () => {
               variant="outlined"
               fullWidth
               required
+              style={{ backgroundColor: '#f5f5f5' }} // Light background color
             />
             {errors.walletAddress && <Typography color="error">{errors.walletAddress.message}</Typography>}
           </Grid>
@@ -78,6 +79,7 @@ const Transaction = () => {
               type="number"
               fullWidth
               required
+              style={{ backgroundColor: '#f5f5f5' }} // Light background color
             />
             {errors.amount && <Typography color="error">{errors.amount.message}</Typography>}
           </Grid>
